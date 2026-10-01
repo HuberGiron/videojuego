@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080b1a" />
+  <title>Maze Blaster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ARCADE LAB SHOOTER</p>
+        <h1>MAZE BLASTER</h1>
+      </div>
+      <button id="soundBtn" class="icon-btn" type="button" aria-label="Activar o desactivar sonido">SONIDO: ON</button>
+    </header>
+
+    <section class="hud" aria-label="Marcador">
+      <div class="hud-card"><span>SCORE</span><strong id="score">000000</strong></div>
+      <div class="hud-card"><span>NIVEL</span><strong id="level">01</strong></div>
+      <div class="hud-card"><span>VIDAS</span><strong id="lives">● ● ●</strong></div>
+      <div class="hud-card"><span>RÉCORD</span><strong id="highScore">000000</strong></div>
+    </section>
+
+    <section class="game-stage">
+      <canvas id="game" width="960" height="600" aria-label="Videojuego Maze Blaster"></canvas>
+
+      <div id="startOverlay" class="overlay is-visible">
+        <div class="overlay-card">
+          <img src="assets/hero.svg" class="hero-badge" alt="Personaje principal amarillo con bláster" />
+          <p class="kicker">MISIÓN</p>
+          <h2>Recorre el laberinto y elimina a los invasores.</h2>
+          <div class="controls-grid">
+            <div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>Mover</span></div>
+            <div><kbd>ESPACIO</kbd><span>Disparar</span></div>
+            <div><kbd>R</kbd><span>Reiniciar</span></div>
+            <div><kbd>P</kbd><span>Pausa</span></div>
+          </div>
+          <button id="startBtn" class="primary-btn" type="button">INICIAR PARTIDA</button>
+          <p class="microcopy">También puedes apuntar y disparar con el mouse.</p>
+        </div>
+      </div>
+
+      <div id="gameOverOverlay" class="overlay">
+        <div class="overlay-card compact">
+          <p class="kicker danger">GAME OVER</p>
+          <h2>Puntuación: <span id="finalScore">0</span></h2>
+          <p id="recordMessage">Inténtalo de nuevo.</p>
+          <button id="restartBtn" class="primary-btn" type="button">VOLVER A JUGAR</button>
+        </div>
+      </div>
+
+      <div id="pauseBadge" class="pause-badge">PAUSA</div>
+    </section>
+
+    <footer class="footer-row">
+      <span>Recoge núcleos de energía para sumar puntos.</span>
+      <span>Los invasores se vuelven más rápidos en cada nivel.</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

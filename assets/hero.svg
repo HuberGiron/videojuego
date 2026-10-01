@@ -1,0 +1,18 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="body" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(58 48) rotate(44) scale(92)">
+      <stop stop-color="#FFF179"/><stop offset=".55" stop-color="#FFD52A"/><stop offset="1" stop-color="#F3A80A"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <circle cx="75" cy="80" r="55" fill="url(#body)" filter="url(#glow)"/>
+  <path d="M75 80L137 48A61 61 0 0 1 137 112L75 80Z" fill="#090C1D"/>
+  <ellipse cx="75" cy="52" rx="7" ry="9" fill="#13162D"/>
+  <circle cx="77" cy="49" r="2.4" fill="white"/>
+  <g transform="translate(106 75)">
+    <rect x="0" y="0" width="43" height="13" rx="5" fill="#5365A4"/>
+    <rect x="7" y="3" width="36" height="7" rx="3.5" fill="#7DEBFF"/>
+    <rect x="-4" y="7" width="16" height="23" rx="5" fill="#313B73"/>
+    <circle cx="40" cy="6.5" r="3" fill="#E9FBFF"/>
+  </g>
+</svg>
